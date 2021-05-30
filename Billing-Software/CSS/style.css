@@ -1,0 +1,418 @@
+/* Billing Software css */
+
+*{
+
+    margin: 0; 
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+
+}
+.container{
+
+    width: 100%;
+    height: 650px;
+    padding: 20px;
+    background-image: url(../images/bg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header{
+
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+#head{
+
+    font-size: 2.6rem;
+    color: white;
+    animation: right 5s  ease-in-out infinite;
+    background-image: linear-gradient(-30deg, #abecd6 40%, #fbed96 100%);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-bottom: 20px;
+
+}
+@keyframes right {
+    
+    0%{
+        background-position: 0-50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+
+}
+.main{
+
+    display: flex;
+    height: 80%;
+
+}
+
+form{
+
+    flex-grow: 1;
+    line-height: 2;
+    padding-left: 5%;
+}
+form h2{
+    font-size: 2rem;
+    text-decoration: underline;
+    color: white;
+}
+.content{
+
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    /* background-image: url(../images/bg1.jpg);     */
+}
+.content-head{
+
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+}
+label{
+
+    font-size: 1.4rem;
+    padding: 10px;
+    padding-left: 0px;
+    font-weight: bolder;
+    color: white;
+}
+input{
+
+    width: 220px;
+    height: 25px;
+    padding-left: 10px;
+    background-color: white;
+    border: 1px solid #00000033;
+    font-size: 1.3rem;
+    outline: none;
+    margin: 5px 20px;
+    border-radius: 10px;
+    
+}
+input:hover{
+
+    outline: thistle;
+    border-radius: 5px;
+    transition: 100ms;
+    border: none;
+    box-shadow: 1px 1px 3px black;
+
+}
+#submit{
+    margin-left: 10%;
+    width: 130px;
+    height: 40px;
+    background-color: white;
+    font-weight: bolder;
+    color: rgba(0, 183, 255, 0.979);
+    box-shadow: 0px 0px 10px #6f696a;
+}
+#submit:hover{
+
+    opacity: 0.9;
+}
+#btn{
+
+    margin-left: 0;
+    width: 100px;
+    height: 35px;
+    border: 1px solid grey;
+    background-color:white;
+    font-weight: bolder;
+    padding-left: 0px;
+    color: #11dbfb;
+    border-radius: 5px;
+    
+}
+
+#content-2-header-1 {
+
+    height: 30px;
+    width: 100%;
+    padding: 0px 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+}
+#content-1-header-1 p{
+
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+.content-1-main::-webkit-scrollbar{
+    display: none;
+}
+.content-1-main{
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    height: 250px;
+   
+
+
+}
+.column{
+    
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+.column h1{
+
+    font-size: 1.4rem;
+}
+.colm-2{
+    flex-grow: 2;
+}
+.table-head{
+
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    box-shadow:0px 0px 1px white; 
+    
+
+}
+.table-content{ 
+    width: 100%;
+    border-top:0px;
+}
+ul li{
+
+    padding: 20px;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    list-style-type: none;
+    background-color: whitesmoke;
+    text-align: center;
+
+}
+.table-total{
+
+        margin-top:5%;
+        width: 100%;
+        display: flex;
+}
+.table-total span{
+
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background-color: white;
+    padding: 10px;
+    padding-right: 50px;
+} 
+#total-text,#total-value,#gst-text,#gst-value,#gt-text,#gt-value{
+
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding: 10px 0px;
+    color: red;
+}
+.table-total-3{
+
+    width: 200px;
+    display: flex;
+    background-color:#ffffff;
+    justify-content: space-around;
+    transform: translate(147%, 42px);
+
+}
+#gt-text{
+
+    margin-left: -10px;
+}
+.table-total-2 button{
+
+    margin-top: 10px;
+}
+#edits{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.edit-input{
+
+    width: 20%;
+    height: 30px;
+    background-color: white;
+    color: red;
+    font-size: 1.2rem;
+    box-shadow: 0px 0px 5px grey;
+    border-radius: 5px;
+    margin: 65px 0px 0px 20px ;
+    font-weight: bolder;
+}
+.e2{
+    width: 45px;
+}
+
+@media only screen and (max-width:900px){
+
+        .table-head h1{
+
+            font-size: 1rem;
+        }
+        .table-total-3{
+
+            transform: translate(110%,42px);
+        }
+
+    
+}
+@media only screen and (max-width:750px){
+
+    .table-head h1{
+
+        font-size: 0.9rem;
+        
+    }
+    .table-total-3{
+
+        transform: translate(80%,42px);
+    }
+    .table-head{
+
+        padding: 10px 16px;
+    }
+
+}
+@media only screen and (max-width:700px){
+
+
+        .container{
+
+            width: 100%;
+            padding: 5px;
+            background-size: cover;
+            font-size: 5px;
+
+        }
+        .main{
+
+            display: flex;
+            flex-direction: column;
+    
+        }
+        .table-head{
+
+            padding: 10px 17px;
+        }
+        .table-head h1{
+
+            font-size: 1rem;
+        }
+        .table-total-3 {
+            width: 150px;
+            display: flex;
+            color: white;
+            background-color: white;
+            justify-content: space-around;
+            transform: translate(150%, 38px);
+        }
+        .content{
+
+            background-image: url(../images/bg1.jpg);
+            /* z-index: -1; */
+        }
+        input{
+
+            width: 170px;
+            font-size: 1rem;
+            margin-left: 3%;;
+        }
+        #submit{
+            margin-left: 10%;
+            width: 70px;
+            height: 30px;
+            font-size: 1rem;
+        }
+        .edit-input{
+
+            height: 20px;
+            width: 60px;
+            font-size: 0.9rem;
+            padding: 2px;
+            margin: 0px;
+        }
+        .edit-option{
+
+            margin: 65px 0px 0px 22%;
+        }    
+
+}
+@media only screen and (max-width:380px){
+
+    #head{
+
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    form h2{
+
+        font-size: 1.4rem;
+    }
+    label{
+        font-size: 1.1rem;
+    }
+    #submit{
+    margin-left: 19%;
+    width: 70px;
+    height: 30px;
+    font-size: 1rem;
+    text-align: center;
+    }
+    .table-head h1{
+        font-size: 0.7rem;
+    }
+    .table-total-3{
+
+        width: 150px;
+        transform: translate(98%,20px);
+    }
+    #total-text{
+
+        font-size: 1rem;
+    }
+    .edit-input{
+
+        height: 20px;
+        width: 60px;
+        font-size: 0.9rem;
+        margin: 0px 10px;
+        text-align: center;
+
+    }
+    .edit-option{
+
+        margin: 65px 0px 0px 22%;
+        
+    }
+    #edit-option{
+
+        width: 40px;
+    }
+    
+
+
+}
+

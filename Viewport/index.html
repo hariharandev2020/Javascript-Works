@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Viewport</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://material.io/components/buttons/web#interactive-demo">
+    
+</head>
+<body>
+
+    
+    <div class="btns">
+
+        <input type="button" class="btn b-1" value="Mobile" onclick="mobileWidth()">
+        <input type="button" class="btn b-2" value="Tablet" onclick="tabWidth()">
+        <input type="button" class="btn b-3" value="Laptop" onclick="desktopWidth()"> 
+        <button class="mdc-button mdc-button--raised">
+            
+    </button> 
+          
+
+   </div>   
+
+    <div class="container"> 
+      
+        <div class="top-bar">
+
+            <div id="circle">
+
+            </div>
+    
+            <div id="line">
+    
+            </div>  
+
+
+        </div>
+        
+
+        
+       <iframe src="Instagram/index.html" height="600px" width="360px" > </iframe>
+
+       <div id="home-btn">
+
+
+      </div>
+
+    </div>
+     
+
+    <script>
+        
+        // alert("hii");
+        
+       
+
+        
+       
+        function mobileWidth(){
+
+          document.querySelector(".container").style.width = "370px";
+          document.querySelector("iframe").style.width = "340px";
+          
+
+        }
+        function tabWidth(){
+            
+          document.querySelector(".container").style.width = "700px";
+          document.querySelector("iframe").style.width = "670px"; 
+          
+        }
+        function desktopWidth(){
+
+
+          document.querySelector(".container").style.width = "100%";
+          document.querySelector("iframe").style.width = "100%";
+          
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

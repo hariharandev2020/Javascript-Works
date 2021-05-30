@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Billing Software</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="header">   
+        
+            <h1 id="head">Courtala's Super Market</h1>
+        
+            <!-- Header div -->
+        </div>
+        <br>
+
+        <div class="main">
+        
+
+        <form action="">
+
+            <h2 >Enter Billing Details</h2>
+            <br>   
+
+            <label for="cname">Customer Name :</label> 
+            <br>
+            <input type="text"  id="cname" >
+            <br>
+
+            <label for="pcode">Product Code :</label>
+            <br>
+            <input type="number"  id="pcode"  min="1"   >
+            <br>
+
+            <label for="pname">Product Name :</label>
+            <br>
+            <input type="text"  id="pname"   >
+            <br>
+
+            <label for="qty">Quantity :</label>
+            <br>
+            <input type="number"  id="qty"  min="1"  >
+            <br>
+
+            <label for="ppu">Price per unit :</label>
+            <br>
+            <input type="number"  id="ppu"  min="1" oninput="totalPrice()" >
+            <br>
+
+            <label for="ppu">Amount  :</label>
+            <br>
+            <input type="text"  id="amt"    readonly>
+            <br><br>
+        
+            <input type="button" id="submit"  onclick="add()" value="Add cart">
+       
+             <!-- form closing -->
+        </form>
+
+        <div class="content">                                                  
+           
+              <div class="content-1">
+
+                <header id="content-2-header-1">
+
+                    <p id="cusid"> </p>
+                    <p id="cusname"> </p>
+        
+                <!-- header -->
+                </header>
+            
+                <div class="content-1-main">
+
+                    <div class="column colm-1">
+
+                        <!-- <div class="table-head">
+
+                            <h1> S.No </h1>
+
+                        </div>      -->
+
+                    <div class="table-content">
+
+        
+                            
+                                <ul class="row-1">
+
+
+
+                                <!--  row-1 ul -->
+                            </ul>
+
+                        
+
+                     </div>
+
+                            <!-- col-1 div -->
+                    </div>
+
+                    <div class="column colm-2">
+
+                        <div class="table-head">
+
+                            <h1> Product Code </h1>
+
+                        </div> 
+
+                      
+                       
+                        <ul class="row-2">
+
+                                
+
+
+                        </ul>
+                     
+                     
+                        <!-- col-2 -->
+                    </div>    
+
+                    <div class="column colm-3">
+
+                        <div class="table-head">
+
+                            <h1> Product Name </h1>
+
+                        </div> 
+                       
+                    
+                     
+                       <ul class="row-3">
+
+                                
+
+                            <!-- row-1 -->
+                        </ul>
+
+                          <!-- col-3 -->
+                </div>
+
+                    <div class="column colm-4">
+
+                        <div class="table-head">
+
+                            <h1> Qty </h1>
+
+                        </div> 
+                        <ul class="row-4">
+
+                                
+
+
+                        </ul>
+
+                        <!-- col-4 -->
+                    </div>
+
+            
+
+
+                 <div class="column colm-5">
+
+                    <div class="table-head">
+
+                        <h1> Price(Unit) </h1>
+
+                    </div> 
+                    <ul class="row-5">
+
+                            
+
+
+                    </ul>
+
+                    <!-- col-5 -->
+                 </div>
+
+                 <div class="column colm-6">
+
+                    <div class="table-head">
+
+                        <h1> Total </h1>
+
+                    </div> 
+                    <ul class="row-6">
+
+                            
+
+
+                    </ul>
+
+                 
+                    <!-- col-6 -->
+                 </div>
+
+                 
+
+            </div>
+                    <div class="table-total">
+
+            
+     
+                    </div>
+
+                    <div class="table-total-2">
+
+                        <div class="table-total-3" id="subtotal"> 
+                           
+                            <span id="total-text" >  Total  : </span> <span id = "total-value" ></span>  
+
+                        </div> 
+                        <div class="table-total-3" id="subtotal"> 
+                           
+                            <span id="total-text"> Gst 12%  : </span><span id = "gst-text"  ></span>
+
+                        </div> 
+
+                        <div class="table-total-3" id="subtotal"> 
+                           
+                            <span id="total-text"> Grand Total  :</span>   <span id = "gt-text" ></span> 
+
+                        </div>                        
+
+                    </div>
+
+                    <div class="edit-option"> 
+                            
+                        <input type="button" value="Remove" class="edit-input e1" onclick="remove() ">
+                        <input type="number" min="0" class="edit-input e2" id="edit-option" value="1" > 
+                        <input type="button" value="Edit" class="edit-input e3" onclick="edit() ">
+            
+                    </div>
+                <!-- content 1 div-->
+              </div>
+
+             
+                <!--Main  div-->
+        </div>
+
+          
+            <!-- container div -->
+    </div>
+
+
+
+
+    <script src="JS/billing.js" >  </script>
+
+</body>
+</html>

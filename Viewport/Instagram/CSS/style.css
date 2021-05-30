@@ -1,0 +1,380 @@
+/*Instagram CSS File*/
+*{
+    
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+    outline:none;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+	background-color: #fafafa;
+}
+.container{
+
+	width: 100%;
+	height:auto;
+	
+}
+.header{
+   
+   width:100%;
+   height: 60px;
+   border: 1px solid lightgrey;
+   display: grid;
+   grid-template-rows: 60px auto;
+   grid-template-columns: 1fr 3fr 2fr 1fr;
+   background-color: white;
+   position: fixed;
+   top: 0;
+   left:0;
+   right:0;
+
+}
+#icon2,#icon3{
+	display: none;
+}
+#head-one{
+    
+    grid-area: 1/2/2/3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#img-one{
+   
+   width: 100px;
+   height: auto;
+   cursor: pointer;   
+}
+input{
+
+	float: right;
+	width: 210px;
+	height: 27px;
+	border-radius: 3px;
+	margin-right: 20px;
+    background-color: #fafafa;
+    border:1px solid lightgrey;
+    background-image: url("../images/search.png");
+    background-repeat: no-repeat;
+    background-position:62px;
+    background-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+#head-one-input-two{
+
+	display: none;
+}
+#head-two{
+
+	grid-area:1/3/2/4;
+    display: flex;    
+    align-items: center;
+    justify-content:space-evenly;
+    padding: 30px;
+}
+#head-two img{
+
+	width: 22px;
+	height:auto;
+	cursor: pointer; 
+}
+.content{
+
+   margin-top:7%;
+   display: grid;
+   grid-template-rows: 100px auto; 
+   grid-template-columns:1fr 3.2fr 2fr 1fr;      
+   grid-gap: 40px 10px;
+   background-color: #fafafa;
+}
+
+.card-one{
+
+	grid-area: 1/2/2/3;
+	background-color:white;
+	border:1px solid lightgrey;	
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    justify-content: space-around;
+    
+}
+.card-one img{    
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid  #e5495d;
+}
+.card-two{
+
+    border: 1px solid lightgrey;
+    grid-area: 2/2/3/3;
+
+}
+.card-two img{
+   
+    width: 100%;
+    object-fit: contain;
+}
+#card-profile{
+    
+    width: 100%;
+    height: 70px;
+    display:flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+#card-profile img:nth-child(1){
+
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+#icon1{
+
+    width: 20px;
+	height: 20px; 
+	margin-left:50%;
+}
+.card-footer{
+    
+    width:100%;
+    height: 90px;
+    background-color: white;
+    margin-top: 1%;
+    padding:5px 0;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 2fr 4fr 0.5fr;
+}
+#card-footer-one{
+    
+    grid-area:1/1/2/2;
+    display: flex;
+    justify-content: space-around;   
+}
+#card-footer-one img,#card-footer-two img,#card-footer-three img{
+    
+	width: 20px;
+	height: 20px;
+}
+#card-footer-three{
+
+	grid-area: 2/1/3/4;
+	border-top: 1px solid lightgrey;
+    padding: 10px;
+} 
+.aside{
+
+	width: 21%;
+	/*border: 1px solid grey;*/
+	position: fixed;
+	top: 105px;	
+	right:19%;
+
+}
+#aside-two{
+	margin-top: 15%;
+	margin-left: 1%;
+}
+#aside-one img, #aside-two img{
+    
+	width: 50px;
+	height: 50px;
+	object-fit:cover;
+	border-radius: 50%;
+}
+#aside-footer{
+
+	margin-top: 10%;
+	font-size: 0.7em;
+	color: darkgrey;
+}
+.aside span{
+	cursor: pointer;
+}
+#footer{
+	display: none;	
+}
+
+
+@media only screen and (max-width:900px){
+
+
+    .header{
+   
+	   width:100%;
+	   height: 60px;
+	   border: 1px solid lightgrey;
+	   display: grid;
+	   grid-template-rows: 60px auto;
+	   grid-template-columns: 1fr 1.5fr 1fr;
+	   background-color: white;
+	   position: fixed;
+	   top: 0;
+	   left:0;
+	   right:0;
+}
+
+    #head-one{
+    
+	    grid-area: 1/1/2/2;
+	    display: flex;
+	    align-items:center;
+	    justify-content: center;
+}
+    #head-one input{
+          
+          display: none;
+}
+    #head-one-input-two {
+
+       display: flex;
+       align-items: center;
+
+
+}
+   .content{
+
+   		margin-top:15%;
+   		display: grid;
+   		grid-template-rows: 100px auto; 
+  		grid-template-columns:1fr 4fr  1fr;      
+   		grid-gap: 40px 10px;
+   		background-color: #fafafa;
+}
+    .card-one{
+
+    	margin-top: 4%;
+    }
+
+    #icon1{
+
+	    width: 20px;
+		height: 20px; 
+		margin-left:30%;
+}
+	.aside{
+
+	display: none;
+}
+#head-two{
+
+    padding: 10px;
+}
+
+}
+
+@media only screen and (max-width: 650px){
+
+
+    .header{
+   
+	   width:100%;
+	   height: 60px;
+	   border: 1px solid lightgrey;
+	   display: grid;
+	   grid-template-rows: 60px auto;
+	   grid-template-columns: 0.5fr 2fr 0.5fr;
+	   background-color: white;
+	   position: fixed;
+	   top: 0;
+	   left:0;
+	   right:0;
+}       
+
+    #head-one-input-two {
+
+       display: none;
+
+}
+    #head-one{
+    
+	    grid-area: 1/2/2/2;
+	    display: flex;
+	    align-items:center;
+	    justify-content: center;
+}
+        
+    #head-two{
+
+        	display: none;
+
+        }
+        
+
+    .content{
+
+   		margin-top:15%;
+   		display: grid;
+   		grid-template-rows: 100px auto; 
+  		grid-template-columns:1fr;      
+   		grid-gap: 40px 10px;
+   		background-color: #fafafa;
+ 
+}  
+
+    #icon1{
+
+		margin-left:50%;
+}
+
+    #icon2, #icon3 {
+
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    }
+    
+    #icon3 img{
+
+    	width: 25px;
+    	height: 25px;
+    } 
+    #footer{
+
+    	background-color: white;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    #footer img{
+        display: visible;
+    	width: 25px;
+    	height: 25px;
+
+    }
+
+  
+
+}
+@media only screen and (max-width:450px){
+
+      
+    .content{
+
+        margin-top:15%;
+        display: grid;
+        grid-template-rows: 100px auto; 
+        grid-template-columns:repeat(autofit);      
+        grid-gap: 40px 1px;
+        background-color: #faf8f8;
+        overflow:hidden ;
+
+}  
+.card-one img:nth-child(3n){
+ 
+    display: none;
+}
+
+}
