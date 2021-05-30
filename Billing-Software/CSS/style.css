@@ -331,8 +331,8 @@ ul li{
         }
         .content{
 
-            background-image: url(../images/bg1.jpg);
-            /* z-index: -1; */
+            background-image: url(../images/bg3.jpg);
+            margin-top: 15%;
         }
         input{
 
