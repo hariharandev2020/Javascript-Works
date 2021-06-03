@@ -13,7 +13,7 @@ function gettingDay(){
 
 
     var  m = monthDays[monthVal];
-    alert(m);
+//     alert(m);
     document.querySelector("#ans-3").style.color = "white";
 
  
