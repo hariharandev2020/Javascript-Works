@@ -20,7 +20,7 @@ function gettingDay(){
 
     }else if (  ( m === 31) && ( date < 1 || date > 31 )){
     
-            alert("Please enter the correct date into 1-31");
+            alert("Please enter the date into 1-31");
             return false;
     }else if ( ( m  === 28 ) && ( date < 1 || date > 28 ) ){
 
@@ -30,7 +30,7 @@ function gettingDay(){
     
     else if ( ( m === 30) &&  (date < 1 ||  date > 30) ){
 
-            alert ("Please enter correct into 1-30");
+            alert ("Please enter date into 1-30");
             return false;
     }
      
