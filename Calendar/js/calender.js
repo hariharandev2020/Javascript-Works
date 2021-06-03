@@ -48,6 +48,9 @@ function gettingDay(){
     document.querySelector("#ans-2").innerHTML = date;
     document.querySelector("#ans-3").innerHTML = day[nDay];
 
+    document.querySelector("#month").value = '';    
+    document.querySelector("#date").value  = '';    
+
 
 }
 
