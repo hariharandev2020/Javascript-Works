@@ -10,7 +10,7 @@
     var displayValue;
     var result;
     
- 	function darktheme(){
+ 	function darkTheme(){
     
       show.style.color ="black";
       show.style.border = "5px solid  rgb(40, 42, 44)"
@@ -19,10 +19,11 @@
       show.style.backgroundColor="white";
      
     }
- 	function lighttheme(){
+ 	function lightTheme(){
     
-      show.style.backgroundColor="grey";
-      container.style.backgroundColor="#2DBBB";
+      show.style.backgroundColor ="#2DBBB8";
+      show.style.border = "none";
+      container.style.backgroundColor="white";
       container.style.transition="2s"; 
             
  	}
@@ -31,12 +32,7 @@
  	 
       show.innerHTML=" ";      
  
- 	}
-
-  	function dlt(){
-
-    	show.innerHTML= ".";	   
-    }
+ 	}   
 
     function mul(){
  	
@@ -66,9 +62,3 @@
  	 
      
  	}
-
- 	function equal(){
-      
-      show.innerHTML = "=";
-
- 	}      
