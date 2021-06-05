@@ -126,3 +126,29 @@ p:hover{
     font-family: 'Kalam', cursive;
     text-decoration: underline;
 }
+@media only screen and (max-width:800px){
+
+    *{
+        font-size: 8px;
+    }
+    .container{
+     grid-template-columns:none;   
+    grid-template-rows: 2fr 3fr;
+    background-position: left;
+    background-size: cover;
+    }
+    p{
+
+        font-size: 1.5rem;
+    }
+    
+}
+@media only screen and (max-width:400px){
+
+
+     *{
+
+        font-size: 6px;
+     }
+
+}
