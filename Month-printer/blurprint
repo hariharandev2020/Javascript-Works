@@ -1,0 +1,16 @@
+
+The main problem that I want you to solve is printing a calendar for a specific month of 2021.
+
+Phase 1:
+- Jan 1, 2021 falls on Friday
+- So which day does January 19 falls? which day does March 12 falls? - Find it out first.
+
+Phase 2:
+- Have a variable to store the month say 
+             var month = 1 means January. 
+             month = 2 means February. 
+
+- Store the days of each month in an array [31,28,31,30.............]
+- Find which day does the 1st day of the month is falling... It can be Monday or Sunday or any day. 
+- Start the Day-1 of the month on that particular day and loop it through the number of days in the month. 
+- Highlight Saturdays and Sundays in Red color
