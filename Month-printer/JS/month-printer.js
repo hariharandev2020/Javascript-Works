@@ -60,10 +60,37 @@ function createDates(){
     var date       = 1;
     var year       = 2021;   
     var monthValue = document.querySelector("#month").value -1;
-    var day,div,p,text,ans,pdate,res,check;
+    var day,div,p,text,ans,pdate,res,check,val;
+    var nDay = 0;
 
 
-    var nDay = new Date(year,monthValue,date).getDay();
+    for (let x = 0; x <= monthValue; x++) {
+
+              nDay += monthDays[x]; 
+
+    
+            }    
+            // alert(nDay);
+            var newDay = (nDay -1) % 7;
+            
+            // alert(newDay);
+
+            if ( (newDay === 0) || ( newDay === 1 ) ||  (newDay === 2) || ( newDay === 3 ) ) {
+
+                var a = newDay + 3;
+                
+            }else if(  (newDay === 4) || ( newDay === 5 ) ||  (newDay === 6) ) {
+    
+                var a =  newDay - 4;
+            }
+
+            // alert(a);
+            if (  (a === 0) || (a === 0) ){
+
+                 a.style.color = "red";
+            }
+
+
     document.querySelector(".title").innerHTML = month[monthValue] + "&nbsp;" + "&nbsp;" + 2021 ;
 
     for (let j = 1; j <= monthDays[monthValue] ; j++) {
@@ -74,14 +101,9 @@ function createDates(){
     p.appendChild(text);
     res  = div.appendChild(p);
 
-    if(  (new Date(year,monthValue,j).getDay()=== 0) || (new Date(year,monthValue,j).getDay() === 6 ) ){
+        if( j === 1 ){
 
-        res.style.color = "red";
-    }    
-
-    if( j === 1 ){
-
-        res.style.gridColumnStart = nDay + 1; 
+        res.style.gridColumnStart = a + 1; 
     } 
     document.querySelector(".month-dates").appendChild(res);      
 
@@ -98,3 +120,6 @@ function clear(){
     document.querySelector('.month-dates').innerHTML = '';
     
 }
+
+
+
