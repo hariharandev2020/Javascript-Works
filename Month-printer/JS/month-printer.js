@@ -60,37 +60,63 @@ function createDates(){
     var date       = 1;
     var year       = 2021;   
     var monthValue = document.querySelector("#month").value -1;
-    var day,div,p,text,ans,pdate,res,check,val;
+    var day,div,p,text,ans,pdate,res,check,val,a,b;
+    
+
     var nDay = 0;
 
+    if ( monthValue === 0 ){
 
-    for (let x = 0; x <= monthValue; x++) {
+        a =  nDay + 5;
 
-              nDay += monthDays[x]; 
+     }else if( monthValue === 5 ){
 
-    
-            }    
-            // alert(nDay);
-            var newDay = (nDay -1) % 7;
+        a = nDay + 5;
+       
+     }
+    else{
+
+        for (let x = 0; x < monthValue; x++) {
+
+                nDay +=  monthDays[x]; 
+                          
+        }              
+          a  = nDay +1;
+
+    }    
+
+    if ( (monthValue === 5) && (a === 5) ) {
+        
+            b = 4;
+            alert(b);
             
-            // alert(newDay);
+    }
 
-            if ( (newDay === 0) || ( newDay === 1 ) ||  (newDay === 2) || ( newDay === 3 ) ) {
-
-                var a = newDay + 3;
-                
-            }else if(  (newDay === 4) || ( newDay === 5 ) ||  (newDay === 6) ) {
+        b =  a % 7;
     
-                var a =  newDay - 4;
-            }
+        if ( (monthValue === 5) && (a === 5) ) {
+        
+            b = 2;
+            alert(b);    
+       }
+        else if( b === 4){
 
-            // alert(a);
-            if (  (a === 0) || (a === 0) ){
+            b = b-3;
 
-                 a.style.color = "red";
-            }
+        }else if(  (b === 0) || (b === 2) || (b === 1)){
+
+            b = b + 4;
+        }else if( (b === 3) || (b === 6) ){
+
+            b = b - 3;
+        }
 
 
+        if ( (days[p] == "Satuday") || (days[p] == "Sunday")  ){
+
+            b.style.color = "red";  
+       }    
+        
     document.querySelector(".title").innerHTML = month[monthValue] + "&nbsp;" + "&nbsp;" + 2021 ;
 
     for (let j = 1; j <= monthDays[monthValue] ; j++) {
@@ -103,13 +129,14 @@ function createDates(){
 
         if( j === 1 ){
 
-        res.style.gridColumnStart = a + 1; 
-    } 
-    document.querySelector(".month-dates").appendChild(res);      
+        res.style.gridColumnStart = b + 1 ; 
+        }
+       
+        document.querySelector(".month-dates").appendChild(res);      
 
    }    
-
-   document.querySelector("#month").value = '';
+      
+      document.querySelector("#month").value = '';     
 }
 
 //..........
@@ -120,6 +147,4 @@ function clear(){
     document.querySelector('.month-dates').innerHTML = '';
     
 }
-
-
 
