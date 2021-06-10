@@ -88,7 +88,7 @@ function createDates(){
     if ( (monthValue === 5) && (a === 5) ) {
         
             b = 4;
-            alert(b);
+            // alert(b);
             
     }
 
@@ -110,7 +110,7 @@ function createDates(){
             b = b - 3;
         }
 
-        alert(b);
+        // alert(b);
 
     document.querySelector(".title").innerHTML = month[monthValue] + "&nbsp;" + "&nbsp;" + 2021 ;
 
@@ -129,15 +129,15 @@ function createDates(){
         res.style.gridColumnStart = b + 1 ; 
     }
     
-    if ( ( month[monthValue] === "January")  &&   ( 5 * j ) % 7 == 3 || ( 5 * j ) % 7 == 1 ){
+    // if ( ( month[monthValue] === "January")  &&   ( 5 * j ) % 7 == 3 || ( 5 * j ) % 7 == 1 ){
 
-        res.style.color = "red";
+    //     res.style.color = "red";
 
-    } else if ( (month[monthValue] === "February") && ( 1 * j ) % 7 == 6 || ( 1 * j ) % 7 == 0 ){
+    // } else if ( (month[monthValue] === "February") && ( 1 * j ) % 7 == 6 || ( 1 * j ) % 7 == 0 ){
 
-         res.style.color = "red";
+    //      res.style.color = "red";
 
-    } //if (  (month[monthValue] === "March") && ( b === 1 ) && ( b * j ) % 7 === 6 || ( b * j ) % 7 === 0 ){
+    // } //if (  (month[monthValue] === "March") && ( b === 1 ) && ( b * j ) % 7 === 6 || ( b * j ) % 7 === 0 ){
 
     // // res.style.color = "red";
     //  } //else if (  (month[monthValue] === "April") && ( b === 1 ) && ( b * j ) % 7 === 6 || ( b * j ) % 7 === 0 ){
