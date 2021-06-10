@@ -96,8 +96,7 @@ function createDates(){
     
         if ( (monthValue === 5) && (a === 5) ) {
         
-            b = 2;
-            alert(b);    
+            b = 2;   
        }
         else if( b === 4){
 
@@ -111,30 +110,45 @@ function createDates(){
             b = b - 3;
         }
 
+        alert(b);
 
-        if ( (days[p] == "Satuday") || (days[p] == "Sunday")  ){
-
-            b.style.color = "red";  
-       }    
-        
     document.querySelector(".title").innerHTML = month[monthValue] + "&nbsp;" + "&nbsp;" + 2021 ;
 
     for (let j = 1; j <= monthDays[monthValue] ; j++) {
 
     text = document.createTextNode(j);
+    // alert(text.textContent);
     div  = document.createElement("div");
     p    = document.createElement("p");
     p.appendChild(text);
     res  = div.appendChild(p);
 
-        if( j === 1 ){
+
+    if( j === 1 ){
 
         res.style.gridColumnStart = b + 1 ; 
-        }
-       
+    }
+    
+    if ( ( month[monthValue] === "January")  &&   ( 5 * j ) % 7 == 3 || ( 5 * j ) % 7 == 1 ){
+
+        res.style.color = "red";
+
+    } else if ( (month[monthValue] === "February") && ( 1 * j ) % 7 == 6 || ( 1 * j ) % 7 == 0 ){
+
+         res.style.color = "red";
+
+    } //if (  (month[monthValue] === "March") && ( b === 1 ) && ( b * j ) % 7 === 6 || ( b * j ) % 7 === 0 ){
+
+    // // res.style.color = "red";
+    //  } //else if (  (month[monthValue] === "April") && ( b === 1 ) && ( b * j ) % 7 === 6 || ( b * j ) % 7 === 0 ){
+
+    // res.style.color = "red";
+    // }
+
+
         document.querySelector(".month-dates").appendChild(res);      
 
-   }    
+   }
       
       document.querySelector("#month").value = '';     
 }
