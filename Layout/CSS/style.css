@@ -318,6 +318,7 @@ body{
     border-radius: 10px;
     background-color: darkgray;
     margin: auto;
+    z-index:11;
 }
 .icons{
 
@@ -436,9 +437,8 @@ body{
 }
 .details img{
 
-    position : absolute;
-    top: 10%;
-    left:-7%;
+    
+    
 
 }
 .details{
@@ -524,7 +524,7 @@ body{
         width: 80%;
         margin: auto;
         display: flex;
-        margin-top: 65%;
+        margin-top: 35%;
 }
 input{
 
@@ -575,7 +575,31 @@ input{
 
         width: 40%;
     }
+    .profile{
 
+        width: 23%;
+    }
+    .layer{
+
+    width: 25%;
+    top: 12px;
+    left: 29%;
+}
+    .pay-footer{
+
+        margin-top: 30;
+
+    }
+    .details img {
+
+        top: 8%;
+        left: -7%;
+    }
+    #p-img{
+
+        top: 29%;
+
+    }
 
 }
 @media only screen and (max-width: 780px) {
@@ -591,7 +615,9 @@ input{
 
         width: 45%;
     }
-
+    .details P, .details-1 p {
+        
+        font-size: 0.9rem
 
 }
 
@@ -608,7 +634,22 @@ input{
 
         width: 60%;
     }
+    .profile {
+        width: 33%;
+    }  
+    .layer{
 
+        width: 27%;
+        top: 12px;
+        left: 22%;
+    } 
+    .profile-head {
+
+        width: 110%;
+        margin-left: -43px;
+        height: 6%;
+        
+    } 
 
 }
 
@@ -625,7 +666,24 @@ input{
 
         width: 80%;
     }
+    .layer{
 
+        width: 40%;
+        top: 12px;
+        left: 13%;
+    }   
+    .profile {
+        width: 42%;
+    }    
+    #profile-main span {
+        
+        padding: 2px 5px;
+    }    
+    #profile-main span{
+
+        margin-top: -22px;
+        padding: 2px 5px;
+    }
 
 }
 @media only screen and (max-width: 330px) {
@@ -641,6 +699,24 @@ input{
 
         width: 90%;
     }
-
+    .layer {
+        width: 45%;
+        top: 12px;
+        left: 8%
+    }
+    #p-img {
+        top: 32%;
+    }
+    #p-img1 {
+    
+        top: 40%;
+    }
+        .profile {
+        width: 44%;
+    }
+    .details img {
+        top: 11%;
+    }
+    }
 
 }
