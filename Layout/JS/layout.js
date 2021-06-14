@@ -12,14 +12,14 @@ function likeChange(){
     x.style.fontSize            = "3.5rem"; 
     x.style.backgroundColor     = "#f96786";
     x.style.backgroundImage     = "linear-gradient(85deg, #f96786 48%, #f9eb5e 100%)";
-    x.style.transition          = "500ms";   
+    x.style.transition          = "100ms";   
     x.style.boxShadow           = "10px 20px 30px lightblue";
     
     
 
     y.style.fontSize             = "2rem";  
     y.style.backgroundColor      = "#f96786";
-    y.style. backgroundImage     = "linear-gradient(to left, #2487FA 30%, #12D771)";
+    y.style. backgroundImage     = "linear-gradient(to left, #2487FA 100%, #12D771)";
 
 
     animateFront();

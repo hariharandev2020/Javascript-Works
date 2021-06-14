@@ -437,7 +437,8 @@ body{
 }
 .details img{
 
-    
+    left: -12px;
+    top: 27px;
     
 
 }
@@ -447,13 +448,15 @@ body{
     flex-direction: column; 
     justify-content: center;
     height: 90px;
-    line-height: 1.4;
+    line-height: 1.4details imh
 }
 .details P,.details-1 p{
 
     margin-left: 22%;
     color: black;
     font-weight: bolder;
+    white-space: nowrap;
+    font-size: 1.1rem;
 }
 .details-1 p{
 
@@ -475,14 +478,14 @@ body{
 }
 #p-img{
 
-    position : absolute;
-    top: 27%;
+
+    top: 26%;
     left:-7%;
 }
 #p-img1{
 
-    position : absolute;
-    top: 34%;
+    
+    top: 23px;
     left:-7%;
 
 }
@@ -490,8 +493,11 @@ body{
 
     display: flex;
     flex-direction: column; 
-    justify-content: center;
+    justify-content: treenter;
     line-height: 1.4;
+    position : relative;
+
+
 }
 .pay{
 
@@ -524,7 +530,7 @@ body{
         width: 80%;
         margin: auto;
         display: flex;
-        margin-top: 35%;
+        margin-top: 15%;
 }
 input{
 
@@ -581,9 +587,9 @@ input{
     }
     .layer{
 
-    width: 25%;
-    top: 12px;
-    left: 29%;
+    width: 30%;
+    top: 7px;
+    left: 39%;
 }
     .pay-footer{
 
@@ -592,14 +598,15 @@ input{
     }
     .details img {
 
-        top: 8%;
-        left: -7%;
+        top: 25%;
+        left:-14%;
     }
     #p-img{
 
         top: 29%;
 
     }
+    margin-left: 48px;
 
 }
 @media only screen and (max-width: 780px) {
@@ -615,9 +622,15 @@ input{
 
         width: 45%;
     }
-    .details P, .details-1 p {
+    .details p, .details-1 p {
         
-        font-size: 0.9rem
+        font-size: 1rem;
+        margin-left: 30px;
+    } 
+    .pay-footer{
+
+        margin-left: 60px;
+    }  
 
 }
 
@@ -717,6 +730,10 @@ input{
     .details img {
         top: 11%;
     }
-    }
+    .pay-footer{
 
+        height: 20px;
+        width: 50%;
+    }
 }
+
