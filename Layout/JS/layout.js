@@ -59,14 +59,14 @@ function profilePage(){
     document.querySelector("#head-img2").style.animation = "swing2 2s ease";
     document.querySelector("#head-img3").style.animation = "swing3 2s ease";
 
-    document.querySelector(".main").style.filter = "brightness";
+    document.querySelector(".layer").style.display = "block";
     // document.querySelector("#head-img").style.display = "none";
 }
  function closing(){
     
      document.querySelector(".profile").style.display = "none";
      document.querySelector(".profile").style.transition = "2s";   
-    
+     document.querySelector(".layer").style.display = "none";   
     }
 
 

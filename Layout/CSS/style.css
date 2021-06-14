@@ -51,6 +51,7 @@ body{
                          "foot"  ;
     padding: 0px 20px; 
     overflow: hidden;
+    z-index: 3;
                                                       
 }
 .head{
@@ -68,7 +69,7 @@ body{
 
 .head-img,.details img,.details-1 img{
     
-    box-shadow: 1px 10px 5px 1px #dcdfe0;
+    box-shadow: 1px 7px 3px 0px #dcdfe0;
     border-radius: 30px;
 }
 .head-img img,.details img,.details-1 img{
@@ -268,6 +269,7 @@ body{
 
     width: 100%;
     height: 100%;
+    
 }
 #f1{
 
@@ -436,7 +438,7 @@ body{
 
     position : absolute;
     top: 10%;
-    left:-4%;
+    left:-7%;
 
 }
 .details{
@@ -444,7 +446,7 @@ body{
     display: flex;
     flex-direction: column; 
     justify-content: center;
-    height: 120px;
+    height: 90px;
     line-height: 1.4;
 }
 .details P,.details-1 p{
@@ -452,6 +454,11 @@ body{
     margin-left: 22%;
     color: black;
     font-weight: bolder;
+}
+.details-1 p{
+
+    margin-left: 20%;
+
 }
 .details p:last-child,.details-1 p:last-child {
 
@@ -469,14 +476,14 @@ body{
 #p-img{
 
     position : absolute;
-    top: 35%;
-    left:-4%;
+    top: 27%;
+    left:-7%;
 }
 #p-img1{
 
     position : absolute;
-    top: 44%;
-    left:-4%;
+    top: 34%;
+    left:-7%;
 
 }
 .details-1{
@@ -506,8 +513,9 @@ body{
     width: 20px;
     height: 20px;
     object-fit: cover;
-    margin-left: -10px;
+    margin-left: -7px;
     font-size: 0.9rem;
+    box-shadow: 0px 0px 1px 0px white;
 
 }
 .pay-footer{
@@ -516,7 +524,7 @@ body{
         width: 80%;
         margin: auto;
         display: flex;
-        margin-top: 35%;
+        margin-top: 65%;
 }
 input{
 
@@ -524,18 +532,33 @@ input{
     text-align: center;
     box-shadow: 0px 0px  2px  lightgrey;
 }
+
 .pay-footer input:first-child{
 
-    background-color: rgb(249,73,100);
+    background-color: rgb(231, 91, 112);
     border-radius: 20px 0px 0px 20px;
     color: white;
     font-weight: bolder;
-
 }
+
 .pay-footer input:last-child{
 
     background-color: #EEEEEE;
     color: rgb(63, 60, 60);
     font-weight: bolder;
     border-radius: 0px 20px 20px 0px;
+}
+.layer{
+
+    display: none;
+    width: 17%;
+    height: 90vh;
+    background-color: #456699;
+    opacity: 0.6;
+    position: absolute;
+    top: 2px;
+    left: 39%;
+    z-index: 4;
+    border-radius: 21px;
+
 }
