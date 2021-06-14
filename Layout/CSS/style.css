@@ -458,6 +458,7 @@ body{
     font-weight: bolder;
     white-space: nowrap;
     font-size: 1.1rem;
+    line-height: 1.5;
 }
 .details-1 p{
 
@@ -498,7 +499,10 @@ body{
     line-height: 1.4;
     position : relative;
 
+}
+#p1,#p2{
 
+    margin-left: 45px;
 }
 .pay{
 
