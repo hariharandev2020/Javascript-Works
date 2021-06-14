@@ -15,6 +15,7 @@ body{
 .container{
 
     width  : 60%;
+    min-width: 450px;
     height : 100vh;
     background-image: linear-gradient(to right, #ee99ff, #e390fb, #d787f6, #cb7ef2, #be76ee);
     margin: auto;
@@ -604,9 +605,9 @@ input{
     #p-img{
 
         top: 29%;
-
+        margin-left: 48px;
     }
-    margin-left: 48px;
+   
 
 }
 @media only screen and (max-width: 780px) {
@@ -629,7 +630,7 @@ input{
     } 
     .pay-footer{
 
-        margin-left: 60px;
+        margin-top: 40px;
     }  
 
 }
