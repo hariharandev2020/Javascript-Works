@@ -25,7 +25,7 @@ body{
 }
 #container{
   
-    width: 260px;
+    width: 300px;
     height: 96%;
     margin: 12px auto;
     background-color: #141414;
@@ -145,7 +145,7 @@ body{
 
 .main{
 
-    width: 80%;
+    width: 60%;
 
 }
 

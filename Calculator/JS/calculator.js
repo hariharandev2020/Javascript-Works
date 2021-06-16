@@ -1,11 +1,15 @@
       let show             = document.querySelector("#ans");
       let preview          = document.querySelector("#anss");
-      let result;   
+      let result,animText,animate;   
 
     function number(x){
 
             preview.innerHTML = '';
             preview.innerHTML += x;
+            animText = preview.innerText;
+            animate  = animText.cloneNode();
+            alert(animate);
+
             show.innerHTML += x;    
      }
 
