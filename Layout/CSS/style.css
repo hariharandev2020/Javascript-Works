@@ -704,7 +704,16 @@ input{
     }
 
 }
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 430px) {
+
+
+    .profile{
+
+        width: 60%;
+    }
+
+}
+@media only screen and (max-width: 350px) {
     
 
     .container{
@@ -730,7 +739,7 @@ input{
         top: 40%;
     }
         .profile {
-        width: 44%;
+        width: 72%;
     }
     .details img {
         top: 11%;
