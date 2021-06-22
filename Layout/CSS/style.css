@@ -651,6 +651,11 @@ input{
 @media only screen and (max-width: 600px) {
     
 
+    .sidebar{
+
+        box-shadow: none;
+        
+    }
     .container{
 
         width  : 100%;
@@ -662,9 +667,8 @@ input{
         width: 50%;
     }
     .profile {
-        width: 33%;
         
-        
+        width: 33%;      
     }  
     .layer{
 
@@ -676,9 +680,9 @@ input{
 
         width: 110%;
         margin-left: -43px;
-        height: 6%;
-        
+        height: 6%;     
     } 
+    
 
 }
 
@@ -705,7 +709,7 @@ input{
     }   
     .profile {
         width: 39%;
-        height: 102.8%;
+        height: 102.6%;
         border-radius: 30px;
       
     }    
