@@ -695,6 +695,7 @@ input{
     .main{
 
         width: 65%;
+        margin: auto;
     }
     .layer{
 
@@ -703,7 +704,7 @@ input{
         left: 20%;
     }   
     .profile {
-        width: 39%;
+        width: 35%;
     }    
     #profile-main span {
         
@@ -714,6 +715,10 @@ input{
         
         padding: 2px 5px;
     }
+    .details img {
+        top: 29%;
+
+    }   
 
 }
 @media only screen and (max-width: 430px) {
