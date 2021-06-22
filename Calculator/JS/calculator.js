@@ -1,15 +1,11 @@
       let show             = document.querySelector("#ans");
       let preview          = document.querySelector("#anss");
-      let result,animText,animate;   
+      let result;   
 
     function number(x){
 
             preview.innerHTML = '';
             preview.innerHTML += x;
-            animText = preview.innerText;
-            animate  = animText.cloneNode();
-            alert(animate);
-
             show.innerHTML += x;    
      }
 
@@ -50,18 +46,6 @@
     function clr(){   
        
        show.innerHTML    = '';
-       preview.classList.toggle("ani");
        preview.innerHTML = 0; 
         
  	}   
-
-//     function animation(){
-
-      
-
-//     }
-//     function stopAnimate(){
-
-//       preview.style.animationPlayState = "paused";
-
-//     }

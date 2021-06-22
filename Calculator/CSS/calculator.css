@@ -29,7 +29,7 @@ body{
     height: 96%;
     margin: 12px auto;
     background-color: #141414;
-    border-radius: 20px;
+    border-radius: 25px;
     padding:0px 10px;
    
 }
@@ -115,7 +115,8 @@ body{
 
     background-color: #141414;
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
     position: relative;
     font-family: 'Source Sans Pro';
 }
@@ -129,6 +130,7 @@ body{
 #ope{
 
     color: #E26035;
+    font-weight: 300;
 
 }
 #tot{
@@ -138,7 +140,8 @@ body{
     color: white;
     width: 45px;
     height: 45px;
-    margin-top: 7px;
+    margin-top: 15px;
+    margin-left: 9px;
 }
 
 @media only screen  and (max-width:700px){
