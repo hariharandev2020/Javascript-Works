@@ -682,7 +682,7 @@ input{
 
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 500px) {
     
 
     .container{
@@ -694,17 +694,20 @@ input{
     }
     .main{
 
-        width: 65%;
-        margin: auto;
+        width: 55%;
+        
     }
     .layer{
 
-        width: 30%;
-        top: 12px;
-        left: 20%;
+       width: 30%;
+        top: 13px;
+        left: 23%;
     }   
     .profile {
-        width: 35%;
+        width: 39%;
+        height: 102.8%;
+        border-radius: 30px;
+      
     }    
     #profile-main span {
         
@@ -716,7 +719,8 @@ input{
         padding: 2px 5px;
     }
     .details img {
-        top: 29%;
+       
+        top: 30%;
 
     }   
 
@@ -727,6 +731,7 @@ input{
     .profile{
 
         width: 40%;
+        height: 99%;
         border-radius: 30px;
         min-width: 220px;
     }    
