@@ -156,11 +156,11 @@ function createDates(){
 
         res.style.color  = "#088EFA";
         res.style.border = "3px solid #CCE9FD";
-        res.style.padding = "8px";
+        res.style.padding = "4px 8px";
         res.style.borderRadius = "10px";
         
         ress.style.color = "#088EFA";
-        ress.style.padding = "8px";
+        ress.style.padding = "4px 8px";
         ress.style.border = "3px solid #CCE9FD";
         ress.style.borderRadius = "10px";
    }

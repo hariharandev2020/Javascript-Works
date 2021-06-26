@@ -221,6 +221,10 @@ button:nth-child(2){
         height: auto;
         
     }
+    form{
+
+        margin: 5% auto;
+    }
     p{
 
         font-size: 1.5rem;
