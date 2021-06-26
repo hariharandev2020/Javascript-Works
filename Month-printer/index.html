@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 </head>
 
@@ -23,10 +25,16 @@
 
         <form action="">
 
-            <label for="month">Enter a Month <br> <span>*(in numbers)</span></label>
+            <label for="month">Enter a Value <br> <span>*(in numbers)</span></label>
+            <br>
+            <label for="month">Enter a Month <br></label>
             <br>
             <input type="number" min="1" max="12" id="month">
-             <br>
+            <br>
+            <label for="month">Enter a Date<br></label>
+            <br>
+            <input type="number" min="1" max="31" id="date" value="Enter a date"> 
+            <br><br>
             <input type="button" value="Print Month" id="btn" onclick="printMonth()">
 
         </form>
@@ -35,11 +43,27 @@
 
                 <div class="calendar"> 
                    
-                    <h1 class="title">  </h1>
+                  
+                  <div class="title-1">
+
+                    <p>Today</p> 
+                    <p>Tomorrow</p>
+                    <p>In 2 days</p>
+
+                  </div>
+                  <br>
+                  <div class="title-2"> 
+
+                    <span class="material-icons filled">chevron_left</span>
+                    <p id="title-2">Month</p>
+                    <span class="material-icons filled">chevron_right</span>
+
+                  </div>  
+                    
                 
                 </div>
 
-                <div class="month-days">
+                <div class="month-days" >
 
                     
 
@@ -47,14 +71,72 @@
                 </div>
 
 
-                <div class="month-dates">
+                <div class="month-dates" >
 
 
-
+                  
                 </div>
 
+          <!--c1  -->
         </div>
 
+        <div class="content c2">
+
+          <div class="calendar"> 
+             
+            
+            <div class="title-1">
+
+              <p>Today</p> 
+              <p>Tomorrow</p>
+              <p>In 2 days</p>
+
+            </div>
+            <br>
+            <div class="title-2"> 
+
+              <span class="material-icons filled">chevron_left</span>
+              <p id="title">Month</p>
+              <span class="material-icons filled">chevron_right</span>
+
+
+            </div>  
+              
+          
+          </div>
+
+          <div class="m-days">
+
+              
+
+
+          </div>
+
+
+          <div class="m-dates">
+
+
+            
+          </div>
+
+          <div class="footer-1">
+
+           <p> <span class="material-icons">add</span>   Add Remainder</p>
+
+
+          </div>
+          <div class="footer-2">
+
+              <button> Remove</button>
+              
+              <button>Done </button>
+
+              
+
+          </div>
+
+        <!--c2  -->
+      </div>      
 
     </div>
 

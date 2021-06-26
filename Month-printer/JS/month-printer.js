@@ -2,9 +2,8 @@
 
 function printMonth(){
 
-
-    clear();
     monthValidate(); 
+    clear();
     createDays();
     createDates(); 
   
@@ -13,40 +12,63 @@ function printMonth(){
 function monthValidate(){
 
     var monthValue = document.querySelector("#month").value -1;
+    var date       = document.querySelector("#date").value;
+    var monthDays  = [31,28,31,30,31,30,31,31,30,31,30,31];
 
     if (  (monthValue < 0) || ( monthValue > 11) ) {
 
-        alert("Please enter correct month");
+        alert("Please enter valid month");
         return false;
     }
-}
+
+    if (  ( date < 0) || ( date < monthDays[monthDays]) ) {
+
+        alert("Please enter valid date");
+        return false;
+    }else if( (monthValue === 1 ) && (date > 28) ){
+
+        alert("Please enter valid date")
+        return false;
+    } else if ((monthValue === 3) && (date > 30) || (monthValue === 5) && (date > 30) || (monthValue === 8) && (date > 30) || (monthValue === 10) && (date > 30) ){
+
+        alert ("Please enter valid date");
+        return false;
+    }
+     
+
+    document.querySelector(".content").style.display = "flex";
+    document.querySelector(".c2").style.display = "flex";
+}   
 
 //..................
 
  function createDays() {
      
-     var days       = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday"];
+     var days       = ["Su", "Mo", "Tu", "We","Th", "Fr", "Sa"];
      var day,div,p,text,ans;
 
     for (let i = 0; i < days.length; i++) {
            
     day = days[i];
-    text = document.createTextNode(day);
-    // alert(text);
+    
+    text  = document.createTextNode(day);
+    textOne = document.createTextNode(day);
+    
     div  = document.createElement("div");
     p    = document.createElement("p");
     p.appendChild(text);
-    ans = div.appendChild(p);
-    
-    if ( (day === "Sunday") || (day === "Saturday") ) {
+    ans   = div.appendChild(p);
 
-         ans.style.color = "red";
-         
-    }
-    
+    div  = document.createElement("div");
+    p    = document.createElement("p");
+    p.appendChild(textOne);
+    anss   = div.appendChild(p);
+     
     document.querySelector(".month-days").appendChild(ans);      
+    document.querySelector(".m-days").appendChild(anss); 
 
    }
+
    
 }   
 //.........
@@ -57,100 +79,99 @@ function createDates(){
     var month      = ["January","February","March","April","May","June","July","Auguest","September","October","November","December"];
     var monthDays  = [31,28,31,30,31,30,31,31,30,31,30,31];
     var year       = 2021;
-    var date       = 1;
+    var date       = document.querySelector("#date").value;
+    var d          = 1;
     var year       = 2021;   
     var monthValue = document.querySelector("#month").value -1;
-    var day,div,p,text,ans,pdate,res,check,val,a,b;
-    
+    var day,div,p,text,ans,pdate,res,check,val,a,b,c;
 
     var nDay = 0;
 
-    if ( monthValue === 0 ){
+    if(month[monthValue] === "January"){
 
-        a =  nDay + 5;
+        dateNew = date;
+        // alert(dateNew);
 
-     }else if( monthValue === 5 ){
+    } else {
 
-        a = nDay + 5;
-       
-     }
-    else{
+    for (let x = 0; x <= monthValue -1; x++) {
 
-        for (let x = 0; x < monthValue; x++) {
-
-                nDay +=  monthDays[x]; 
-                          
-        }              
-          a  = nDay +1;
-
-    }    
-
-    if ( (monthValue === 5) && (a === 5) ) {
+       c =  nDay += monthDays[x]; 
         
-            b = 4;
-            // alert(b);
-            
-    }
+      }  
 
-        b =  a % 7;
+    // alert(c);  
+
+    var dateNew = Number(c) + Number(d);
     
-        if ( (monthValue === 5) && (a === 5) ) {
-        
-            b = 2;   
-       }
-        else if( b === 4){
+    // alert(dateNew);
+  
+    }  
+      var newDay = (dateNew) % 7;
 
-            b = b-3;
+    //   alert(newDay);
 
-        }else if(  (b === 0) || (b === 2) || (b === 1)){
+      if ( (newDay === 1) || ( newDay === 2 )) {
 
-            b = b + 4;
-        }else if( (b === 3) || (b === 6) ){
+            a = newDay + 5;
+      }
+      else if( (newDay === 4) || (newDay === 5) || (newDay === 7) || (newDay === 3) || (newDay === 6)  ){
 
-            b = b - 3;
-        }
+            a = newDay -2;
 
-        // alert(b);
+      }else if( newDay === 0){
 
-    document.querySelector(".title").innerHTML = month[monthValue] + "&nbsp;" + "&nbsp;" + 2021 ;
+          a = newDay + 5;
+      }
+      
+         
+
+    document.querySelector("#title").innerHTML = month[monthValue] + "&nbsp;" + "&nbsp;" + 2021 ;
+    document.querySelector("#title-2").innerHTML = month[monthValue] + "&nbsp;" + "&nbsp;" + 2021 ;
+    var date       = document.querySelector("#date").value;
 
     for (let j = 1; j <= monthDays[monthValue] ; j++) {
 
     text = document.createTextNode(j);
+    textOne = document.createTextNode(j);
     // alert(text.textContent);
     div  = document.createElement("div");
     p    = document.createElement("p");
     p.appendChild(text);
-    res  = div.appendChild(p);
+    res  = div.appendChild(p);    
+
+    div  = document.createElement("div");
+    p    = document.createElement("p");
+    p.appendChild(textOne);
+    ress  = div.appendChild(p);
 
 
-    if( j === 1 ){
+    if ( j === 1 ){
 
-        res.style.gridColumnStart = b + 1 ; 
+        res.style.gridColumnStart = a;
+        ress.style.gridColumnStart = a;
     }
-    
-    // if ( ( month[monthValue] === "January")  &&   ( 5 * j ) % 7 == 3 || ( 5 * j ) % 7 == 1 ){
 
-    //     res.style.color = "red";
+    if ( (j == date) || (j == date) ) {
 
-    // } else if ( (month[monthValue] === "February") && ( 1 * j ) % 7 == 6 || ( 1 * j ) % 7 == 0 ){
-
-    //      res.style.color = "red";
-
-    // } //if (  (month[monthValue] === "March") && ( b === 1 ) && ( b * j ) % 7 === 6 || ( b * j ) % 7 === 0 ){
-
-    // // res.style.color = "red";
-    //  } //else if (  (month[monthValue] === "April") && ( b === 1 ) && ( b * j ) % 7 === 6 || ( b * j ) % 7 === 0 ){
-
-    // res.style.color = "red";
-    // }
-
-
-        document.querySelector(".month-dates").appendChild(res);      
-
+        res.style.color  = "#088EFA";
+        res.style.border = "3px solid #CCE9FD";
+        res.style.padding = "8px";
+        res.style.borderRadius = "10px";
+        
+        ress.style.color = "#088EFA";
+        ress.style.padding = "8px";
+        ress.style.border = "3px solid #CCE9FD";
+        ress.style.borderRadius = "10px";
    }
+
+    document.querySelector(".month-dates").appendChild(res);      
+    document.querySelector(".m-dates").appendChild(ress);
+
+    } //else if ( (monthValue === ) )
       
-      document.querySelector("#month").value = '';     
+      document.querySelector("#month").value = ''; 
+      document.querySelector("#date").value = '';     
 }
 
 //..........
@@ -158,7 +179,7 @@ function createDates(){
 function clear(){
 
     document.querySelector(".month-days").innerHTML  = '';
-    document.querySelector('.month-dates').innerHTML = '';
-    
+    document.querySelector('.month-dates').innerHTML = ''; 
+    document.querySelector(".m-days").innerHTML = '';  
+    document.querySelector(".m-dates").innerHTML = '';
 }
-
