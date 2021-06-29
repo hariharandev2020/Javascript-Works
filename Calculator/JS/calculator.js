@@ -1,17 +1,38 @@
       let show             = document.querySelector("#ans");
       let preview          = document.querySelector("#anss");
-      let result;   
+      let result,a,x,y,z,clone,text,res;   
+      
 
-    function number(x){
+    function number(event){
 
+            // console.log(event);
+            x = event;
+            // alert(x.value); 
             preview.innerHTML = '';
-            preview.innerHTML += x;
-            show.innerHTML += x;    
+            clone  = x.cloneNode(true);
+            clone.classList.add(event.getAttribute("animate"));
+            // console.log(y);
+            x.appendChild(clone);
+            setTimeout(function() {
+            x.removeChild(clone);
+            preview.innerHTML += x.value;
+            show.innerHTML += x.value;
+
+            },500)
+
+            
+
+            // text  = preview.innerText;
+            // place = preview.getBoundingClientRect();
+            // console.log(place);
+
      }
 
-    function operator(y){
+    function operator(event){
 
       let check = /[+,*,/,%,-]/g;
+
+            y = event;
 
             if( (show.innerHTML === '' ) || preview.innerHTML === ''){
 
@@ -24,6 +45,14 @@
 
                         preview.innerHTML = '';
                         result = eval(show.innerText);
+
+                        z = document.querySelector("#anss");
+                        z.classList.add("animation-res");
+                        setTimeout(function(){
+
+                              z.classList.remove("animation-res")
+
+                        },500)
                         preview.innerHTML = result;
                         show.innerHTML    += y; 
 
@@ -36,16 +65,35 @@
                   } else{
 
                         preview.innerHTML = '';
-                        preview.innerHTML += y;
-                        show.innerHTML    += y;      
+                        // alert(x.value); 
+                        preview.innerHTML = '';
+                        text = y.cloneNode(true);
+                        text.classList.add(event.getAttribute("animation"));
+                        y.appendChild(text);
+                        setTimeout(function() {
+                        y.removeChild(text);
+                        preview.innerHTML += y.value;
+                        show.innerHTML    += y.value;      
+
+                        },500)
+                        
                   }      
        
             }
 
 
     function clr(){   
-       
-       show.innerHTML    = '';
-       preview.innerHTML = 0; 
+
+           
+            show.innerHTML    = '';
+            z = document.querySelector("#anss");
+            z.classList.add("animation-clr");
+            setTimeout(function(){
+
+                  z.classList.remove("animation-clr")
+
+            },500)
+                  preview.innerHTML = 0;       
+                 
         
  	}   
