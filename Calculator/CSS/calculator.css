@@ -324,3 +324,13 @@ body{
     }
             
 }
+@media only screen  and (max-width: 400px){
+
+    .main{
+    
+        height: 640px;
+        margin: auto;
+    
+    }
+            
+}
