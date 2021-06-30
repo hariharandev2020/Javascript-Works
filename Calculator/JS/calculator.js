@@ -11,7 +11,6 @@
             preview.innerHTML = '';
             clone  = x.cloneNode(true);
             clone.classList.add(event.getAttribute("animate"));
-            // console.log(y);
             x.appendChild(clone);
             setTimeout(function() {
             x.removeChild(clone);
@@ -65,7 +64,6 @@
                   } else{
 
                         preview.innerHTML = '';
-                        // alert(x.value); 
                         preview.innerHTML = '';
                         text = y.cloneNode(true);
                         text.classList.add(event.getAttribute("animation"));
