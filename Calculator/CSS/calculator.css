@@ -15,7 +15,7 @@ body{
 .main{
 
     width: 60%;
-    min-width: 500px;
+    min-width: 400px;
     height: 95vh;
     background-color: #FFF8ED;
     margin: 1% auto;
@@ -332,7 +332,7 @@ body{
 
     .main{
     
-        height: 640px;
+        height: 660px;
         margin: auto;
     
     }
