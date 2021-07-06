@@ -48,17 +48,17 @@ function operator(event) {
                         n2 = b.slice(index+1);
                         result = Number(n1) + Number(n2);
                         
-                        
-                        z = document.querySelector("#anss");
-                        z.classList.add("animation-res");
-                        setTimeout(function(){
-
-                        z.classList.remove("animation-res")
                         preview.innerHTML = '';
                         preview.innerHTML = result;
                         show.innerHTML += y;
 
-                        },300)
+                        z = document.querySelector("#anss");
+                        z.classList.add("animation-equal");
+                        setTimeout(function(){
+
+                        z.classList.remove("animation-equal")
+
+                        },500)
 
 
                   }else if (find == "-" ) {
@@ -66,16 +66,18 @@ function operator(event) {
                         n1 = b.slice(0,index);
                         n2 = b.slice(index+1);   
                         result = Number(n1) - Number(n2);
+
                         preview.innerHTML = '';
                         preview.innerHTML = result;
+                        show.innerHTML += y;
 
                         z = document.querySelector("#anss");
-                        z.classList.add("animation-res");
+                        z.classList.add("animation-equal");
                         setTimeout(function(){
 
-                        z.classList.remove("animation-res")
+                        z.classList.remove("animation-equal")
 
-                        },300)
+                        },500)
 
                   }
                   else if (find == "*" ){
@@ -84,16 +86,18 @@ function operator(event) {
                         n1 = b.slice(0,index);                     
                         n2 = b.slice(index+1);
                         result = Number(n1) * Number(n2);
+
                         preview.innerHTML = '';
                         preview.innerHTML = result;
+                        show.innerHTML += y;
 
                         z = document.querySelector("#anss");
-                        z.classList.add("animation-res");
+                        z.classList.add("animation-equal");
                         setTimeout(function(){
 
-                        z.classList.remove("animation-res")
+                        z.classList.remove("animation-equal")
 
-                        },300)
+                        },500)
 
                   }
 
@@ -102,16 +106,18 @@ function operator(event) {
                         n1 = b.slice(0,index);                        
                         n2 = b.slice(index+1);
                         result = Number(n1) / Number(n2);
+
                         preview.innerHTML = '';
                         preview.innerHTML = result;
+                        show.innerHTML += y;
 
                         z = document.querySelector("#anss");
-                        z.classList.add("animation-res");
+                        z.classList.add("animation-equal");
                         setTimeout(function(){
 
-                        z.classList.remove("animation-res")
+                        z.classList.remove("animation-equal")
 
-                        },300)
+                        },500)
 
                      
                   }
@@ -120,16 +126,18 @@ function operator(event) {
                         n1 = b.slice(0,index);                        
                         n2 = b.slice(index+1);
                         result = Number(n1) % Number(n2);
+
                         preview.innerHTML = '';
                         preview.innerHTML = result;
+                        show.innerHTML += y;
 
                         z = document.querySelector("#anss");
-                        z.classList.add("animation-res");
+                        z.classList.add("animation-equal");
                         setTimeout(function(){
 
-                        z.classList.remove("animation-res")
+                        z.classList.remove("animation-equal")
 
-                        },300)
+                        },500)
 
                      
                   }
