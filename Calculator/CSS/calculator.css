@@ -72,7 +72,7 @@ body{
     align-items: flex-end;
     justify-content: flex-end;
     position: relative;
-    overflow: hidden;
+
 }
 #dis2{
 
@@ -239,8 +239,8 @@ body{
 }
 @keyframes left15 {
 
-    0% {position: relative; left:-2px; top: 0px; color: white; opacity: 0.5;}
-    100%   {position: relative; top:-380px;left:0px;background-color: transparent; color: white;font-size: 5rem;}
+    0% {position: relative; left:0px; top: 400px; color: white; opacity: 0.5;}
+    100%   {position: relative; top:0px;left:0px;background-color: transparent; color: white;font-size: 5rem;}
    
 }
 
@@ -253,15 +253,7 @@ body{
    0% {position: relative; left:-240px;opacity: 0.5;}
    100%   {position: relative;left:0px; top: 0px; background-color: transparent;font-size: 5rem;}
 }
-.animation-res{
 
-    animation: left17 500ms ease;
-}
-@keyframes left17 {
-
-    0% {position: relative; left:0px; top: 400px; opacity: 0.5;}
-    100%   {position: relative;left:0px; top: 0px; background-color: transparent;font-size: 5rem;}
- }
 
 .content{
 
