@@ -346,6 +346,61 @@ body{
 
         margin-top: 31px;
     }
+    .animation-4{
+
+        animation: left4 500ms ease;
+    }
+    @keyframes left4 {
+    
+       0% {position: relative; left:-2px; top: -20px; opacity: 0.5;}
+       100%   {position: relative; top:-290px;left:210px;background-color: transparent;font-size: 5rem;}
+    } 
+    .animation-5{
+    
+        animation: left5 500ms ease;
+    }
+    @keyframes left5 {
+    
+       0% {position: relative; left:-2px; top: -20px; opacity: 0.5;}
+       100%   {position: relative; top:-290px;left:140px;background-color: transparent;font-size: 5rem;}
+    } 
+    .animation-6{
+    
+        animation: left6 500ms ease;
+    }
+    @keyframes left6 {
+    
+       0% {position: relative; left:-2px; top: -20px; opacity: 0.5;}
+       100%   {position: relative; top:-290px;left: 70px;background-color: transparent;font-size: 5rem;}
+    } 
+    .animation-7{
+    
+        animation: left7 500ms ease;
+    }
+    @keyframes left7 {
+    
+       0% {position: relative; left:-2px; top: -20px; opacity: 0.5;}
+       100%   {position: relative; top:-200px;left:215px; background-color: transparent;font-size: 5rem;}
+    } 
+    .animation-8{
+    
+        animation: left8 500ms ease;
+    }
+    @keyframes left8 {
+    
+       0% {position: relative; left:-2px; top: -20px; opacity: 0.5;}
+       100%   {position: relative; top:-200px;left:145px; background-color: transparent;font-size: 5rem;}
+    } 
+    .animation-9{
+    
+        animation: left9 500ms ease;
+    }
+    @keyframes left9 {
+    
+        0% {position: relative; left:-2px; top: 0px; color: white; opacity: 0.5;}
+        100%   {position: relative; top:-215px; left:70px; background-color: transparent;color: white;font-size: 5rem;}
+      
+    } 
             
 }
 @media only screen  and (max-width: 400px){
