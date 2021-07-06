@@ -1,97 +1,177 @@
-      let show             = document.querySelector("#ans");
-      let preview          = document.querySelector("#anss");
-      let result,a,x,y,z,clone,text,res;   
-      
+let show = document.querySelector("#ans");
+let preview = document.querySelector("#anss");
+let result, a,b,c,x, y, z, clone, text, res,find,index,n1,n2;
 
-    function number(event){
 
-            // console.log(event);
-            x = event;
-            // alert(x.value); 
-            preview.innerHTML = '';
-            clone  = x.cloneNode(true);
-            clone.classList.add(event.getAttribute("animate"));
-            x.appendChild(clone);
-            setTimeout(function() {
-            x.removeChild(clone);
-            preview.innerHTML += x.value;
-            show.innerHTML += x.value;
+function number(event) {
 
-            },500)
+      // // console.log(event);
+      x = event;
+      // alert(x.value); 
+      preview.innerHTML = '';
+      clone  = x.cloneNode(true);
+      clone.classList.add(event.getAttribute("animate"));
+      x.appendChild(clone);
+      setTimeout(function() {
+      x.removeChild(clone);
+      preview.innerHTML += x.value;
+      show.innerHTML += x.value;
 
-            
+      },400)
 
-            // text  = preview.innerText;
-            // place = preview.getBoundingClientRect();
-            // console.log(place);
 
-     }
+}
 
-    function operator(event){
+function operator(event) {
 
       let check = /[+,*,/,%,-]/g;
 
-            y = event;
+      y = event;
 
-            if( (show.innerHTML === '' ) || preview.innerHTML === ''){
+      if ((show.innerHTML === '') || preview.innerHTML === '') {
 
-                  alert("Please enter a number ( 1 - 10 ) first");
-                  return false;
-            }
-            else if(y === '=' ){
+            alert("Please enter a number ( 1 - 10 ) first");
+            return false;
+      }
+      else if (y === '=') {
 
-                  if( show.innerText.match(check) ){
+            a = [show.innerText];
+            b = a.toString();
+            find = b.match(check);
+            index = b.indexOf(find);
+            
 
+                  if( find == "+" ){
+
+                        
+                        n1 = b.slice(0,index);
+                        n2 = b.slice(index+1);
+                        result = Number(n1) + Number(n2);
+                        
+                        
+                        z = document.querySelector("#anss");
+                        z.classList.add("animation-res");
+                        setTimeout(function(){
+
+                        z.classList.remove("animation-res")
                         preview.innerHTML = '';
-                        result = eval(show.innerText);
+                        preview.innerHTML = result;
+                        show.innerHTML += y;
+
+                        },300)
+
+
+                  }else if (find == "-" ) {
+
+                        n1 = b.slice(0,index);
+                        n2 = b.slice(index+1);   
+                        result = Number(n1) - Number(n2);
+                        preview.innerHTML = '';
+                        preview.innerHTML = result;
 
                         z = document.querySelector("#anss");
                         z.classList.add("animation-res");
                         setTimeout(function(){
 
-                              z.classList.remove("animation-res")
+                        z.classList.remove("animation-res")
 
-                        },500)
+                        },300)
+
+                  }
+                  else if (find == "*" ){
+
+
+                        n1 = b.slice(0,index);                     
+                        n2 = b.slice(index+1);
+                        result = Number(n1) * Number(n2);
+                        preview.innerHTML = '';
                         preview.innerHTML = result;
-                        show.innerHTML    += y; 
 
-                  }else {
+                        z = document.querySelector("#anss");
+                        z.classList.add("animation-res");
+                        setTimeout(function(){
 
-                        alert("Please enter any operator (+, -, *, %, / )")
-                        return false;       
-                  }     
+                        z.classList.remove("animation-res")
 
-                  } else{
+                        },300)
 
+                  }
+
+                  else if (find == "/" ){
+
+                        n1 = b.slice(0,index);                        
+                        n2 = b.slice(index+1);
+                        result = Number(n1) / Number(n2);
                         preview.innerHTML = '';
-                        preview.innerHTML = '';
-                        text = y.cloneNode(true);
-                        text.classList.add(event.getAttribute("animation"));
-                        y.appendChild(text);
-                        setTimeout(function() {
-                        y.removeChild(text);
-                        preview.innerHTML += y.value;
-                        show.innerHTML    += y.value;      
+                        preview.innerHTML = result;
 
-                        },500)
-                        
-                  }      
-       
+                        z = document.querySelector("#anss");
+                        z.classList.add("animation-res");
+                        setTimeout(function(){
+
+                        z.classList.remove("animation-res")
+
+                        },300)
+
+                     
+                  }
+                  else if (find == "%" ){
+
+                        n1 = b.slice(0,index);                        
+                        n2 = b.slice(index+1);
+                        result = Number(n1) % Number(n2);
+                        preview.innerHTML = '';
+                        preview.innerHTML = result;
+
+                        z = document.querySelector("#anss");
+                        z.classList.add("animation-res");
+                        setTimeout(function(){
+
+                        z.classList.remove("animation-res")
+
+                        },300)
+
+                     
+                  }
+   
+
+            else {
+
+                  alert("Please enter any operator (+, -, *, %, / )")
+                  return false;
             }
 
+      } else {
 
-    function clr(){   
-
-           
-            show.innerHTML    = '';
-            z = document.querySelector("#anss");
-            z.classList.add("animation-clr");
-            setTimeout(function(){
-
-                  z.classList.remove("animation-clr")
+            preview.innerHTML = '';
+            preview.innerHTML = '';
+            text = y.cloneNode(true);
+            text.classList.add(event.getAttribute("animation"));
+            y.appendChild(text);
+            setTimeout(function() {
+            y.removeChild(text);
+            preview.innerHTML += y.value;
+            show.innerHTML += y.value;
 
             },500)
-                  preview.innerHTML = 0;       
-                 
-        
- 	}   
+
+      }
+
+}
+
+
+function clr() {
+
+
+      show.innerHTML = '';
+      z = document.querySelector("#anss");
+      z.classList.add("animation-clr");
+      setTimeout(function () {
+
+            z.classList.remove("animation-clr")
+
+      }, 500)
+      preview.innerHTML = 0;
+
+
+}
