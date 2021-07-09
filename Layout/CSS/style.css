@@ -573,6 +573,25 @@ input{
     border-radius: 21px;
 
 }
+.animation1{
+
+    animation : swing1 2s ease;
+}
+@keyframes swing1 {
+
+    0%{position: relative; z-index: 6;}
+    35%{position: relative; z-index: 6;top: 30px; left: 80px;}
+    70%{position: relative; z-index: 6;top: 60px; left: 50px;}
+    100%{position: relative; z-index: 6;top:60px; left: -50px;}
+}
+.aniation2{
+
+    animation : swing2 2s ease;
+}
+.animation3{
+
+    animation : swing3 2s ease;
+}
 @media only screen and (max-width: 1100px) {
     
 
@@ -698,7 +717,7 @@ input{
     }
     .main{
 
-        width: 55%;
+        width: 60%;
         
     }
     .layer{
@@ -708,7 +727,8 @@ input{
         left: 23%;
     }   
     .profile {
-        width: 39%;
+
+        width: 33%;
         height: 102.6%;
         border-radius: 30px;
       
@@ -726,7 +746,13 @@ input{
        
         top: 30%;
 
-    }   
+    }  
+    .pay-footer {
+        margin-top: 20px;
+    } 
+    #p1, #p2 {
+        margin-left: 30px;
+    }
 
 }
 @media only screen and (max-width: 430px) {
@@ -760,7 +786,9 @@ input{
         top: 32%;
     }
     .details img {
-        top: 11%;
+        top: 30%;
+        left: -16px;
+
     }
     .pay-footer{
 
