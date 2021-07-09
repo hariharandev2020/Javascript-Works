@@ -654,15 +654,14 @@ input{
         
         font-size: 1rem;
         margin-left: 30px;
-    } 
-    .pay-footer{
-
-        margin-top: 40px;
     }  
     .layer {
         width: 20%;
         top: 5px;
         left: 32%;
+    }
+    .pay-footer {
+        margin-top: 20px;
     }
 
 }
@@ -747,9 +746,7 @@ input{
         top: 30%;
 
     }  
-    .pay-footer {
-        margin-top: 20px;
-    } 
+     
     #p1, #p2 {
         margin-left: 30px;
     }
