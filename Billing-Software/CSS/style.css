@@ -203,6 +203,7 @@ ul li{
     list-style-type: none;
     background-color: whitesmoke;
     text-align: center;
+    overflow-wrap:anywhere;
 
 }
 .table-total{
