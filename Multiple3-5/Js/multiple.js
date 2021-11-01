@@ -17,7 +17,7 @@ function condition(){
       condition();
     }
   }else{ 
-      alert("Enter value in above 5");
+      alert("Enter value in above 5 & below 100");
   }    
 }
 
@@ -36,7 +36,7 @@ function conditionTwo(){
       conditionTwo();
     }
   }else{
-      alert("Enter the value in above 5");
+      alert("Enter the value in above 5 & below 100");
   }
 }
 
