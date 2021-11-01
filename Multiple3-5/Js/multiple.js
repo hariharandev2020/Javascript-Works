@@ -4,7 +4,7 @@ var y = 1;
 
 function condition(){
     var value   = document.querySelector("#numberinput").value;
-    if( (value > 5) && (value < 100)){
+    if( (value > 5) && (value < 101)){
     var x = Math.floor(value/3);
 
     if(y == x){
@@ -23,7 +23,7 @@ function condition(){
 
 function conditionTwo(){
     var value   = document.querySelector("#numberinput").value;
-    if( (value > 5) && (value < 100) ){
+    if( (value > 5) && (value < 101) ){
     var z = Math.floor(value/5);
 
     if(c == z){
