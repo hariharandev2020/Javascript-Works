@@ -1,47 +1,42 @@
-var b = 0;
-var c = 1;
-var y = 1;
+var x = 1;
+var a = 3;
+var b = 5;
 
-function condition(){
-    var value   = document.querySelector("#numberinput").value;
-    if( (value > 5) && (value < 101)){
-    var x = Math.floor(value/3);
+function multiple(){	
+  var y = document.querySelector("#numberinput").value;
+if(y > 3 && y <= 100){
 
-    if(y == x){
-       document.querySelector("#ansone").innerHTML += y*3 + ", ";
-    }
-    else{ 
-      document.querySelector("#ansone").innerHTML += y*3 + ", ";
-      b = y+1;
-      y = b;
-      condition();
-    }
-  }else{ 
-      alert("Enter value in above 5 & below 100");
-  }    
+if(x == y){
+ if(x % a == 0){
+  document.querySelector("#ansone").innerHTML += x*1 +", ";
+ }else if(x % b == 0){
+  document.querySelector("#ansone").innerHTML += x*1 +", ";
+ }
+ else{
+  document.querySelector("#ansone").innerHTML += ".";
+ }
 }
-
-function conditionTwo(){
-    var value   = document.querySelector("#numberinput").value;
-    if( (value > 5) && (value < 101) ){
-    var z = Math.floor(value/5);
-
-    if(c == z){
-       document.querySelector("#anstwo").innerHTML += c*5 + ", ";
-    }
-    else{ 
-      document.querySelector("#anstwo").innerHTML += c*5 + ", ";
-      b = c+1;
-      c = b;
-      conditionTwo();
-    }
-  }else{
-      alert("Enter the value in above 5 & below 100");
+else if( (x % a === 0) && (x % b === 0) ){
+  document.querySelector("#ansone").innerHTML += x*1 +", ";
+  x += 1;
+  multiple();
+}
+else if(x % a == 0){
+  document.querySelector("#ansone").innerHTML += x*1 +", ";
+  x += 1;
+  multiple();
+}
+else if (x % b == 0){
+  document.querySelector("#ansone").innerHTML += x*1 +", ";
+  x += 1;
+  multiple();
+}
+else{
+  x += 1;
+  multiple(); 
   }
-}
+ }else {
+      alert("Please enter number into 5 - 100")
+ }
 
-function multiple(){
-condition();
-conditionTwo();
 }
-
